@@ -124,10 +124,11 @@ export function getHttpRpcClient(
           data = JSON.parse(data || '{}')
         }
 
+        console.log(`did a request to ${url}`)
         if (!response.ok) {
           throw new HttpRequestError({
             body,
-            details: stringify(data.error) || response.statusText,
+            details: data.error || response.statusText,
             headers: response.headers,
             status: response.status,
             url,
