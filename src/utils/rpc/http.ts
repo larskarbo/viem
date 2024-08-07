@@ -126,6 +126,8 @@ export function getHttpRpcClient(
 
         console.info(`did a request to ${url}`)
         if (!response.ok) {
+					console.info(`failed with this response`, data)
+					console.info(`failed with this response`, response)
           throw new HttpRequestError({
             body,
             details: data.error || response.statusText,
