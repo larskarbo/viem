@@ -202,5 +202,6 @@
       "limit": "31 kB",
       "import": "{ verifySiweMessage }"
     }
-  ]
+  ],
+  "version": "0.0.1"
 }

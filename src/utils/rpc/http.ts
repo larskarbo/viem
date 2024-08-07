@@ -124,7 +124,8 @@ export function getHttpRpcClient(
           data = JSON.parse(data || '{}')
         }
 
-        console.log(`did a request to ${url}`)
+
+        console.info(`did a request to ${url}`)
         if (!response.ok) {
           throw new HttpRequestError({
             body,
